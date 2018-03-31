@@ -17,6 +17,9 @@ module('Acceptance | list-rentals', function(hooks) {
   });
 
   test('should link to contact information', async assert => {
+    await visit('/');
+    await click('.menu-contact');
+    assert.equal(currentURL(), '/contact', 'should navigate to contact');
   });
 
   test('should list available rentals', async assert => {
