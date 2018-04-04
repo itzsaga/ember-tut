@@ -16,7 +16,7 @@ export default Component.extend({
       let filterInputValue = this.get('value');
       let filterAction = this.get('filter');
       filterAction(filterInputValue).then(filterResults => {
-        if (filteredResults.query === this.get('value')) {
+        if (filterResults.query === this.get('value')) {
           this.set('results', filterResults.results);
         }
       });
